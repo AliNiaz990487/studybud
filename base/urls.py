@@ -2,6 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.home),
-    path("room/<str:pk>/", views.room) # pk for primary key
+    path("", views.home, name='home'),
+    path("room_page/<str:pk>/", views.room, name='room') # pk for primary key
 ]
