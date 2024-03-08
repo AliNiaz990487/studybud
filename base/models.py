@@ -17,6 +17,8 @@ class Room(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ["-updated", "-created"] # the dash in front says to invert (assending to decending)
 
     def __str__(self):
         return f"{self.name}"
